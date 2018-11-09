@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engine": {
+    "node":"8.10.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "npm install pm2 -g && install pm2-logrotate",
+    "start": "pm2 runtime server.js -i 0"
   },
   "author": "",
   "license": "ISC",
