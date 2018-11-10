@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "engine": {
+    "node":"11.0.0",
+    "npm": "6.4.1"
+  },
   "scripts": {
     "preinstall": "npm install pm2 -g && pm2 install pm2-logrotate",
     "start": "pm2-runtime server.js -i 0"
